@@ -312,20 +312,25 @@ mm.add("(min-width: 769px)", () => {
         { t: ".skin-concern", c: "#1A1A1E" }
     ];
 
-    bgMap.forEach(m => {
-        if(document.querySelector(m.t)) {
+    bgMap.forEach((m, index) => {
+        const target = document.querySelector(m.t);
+        if(target) {
             ScrollTrigger.create({ 
-                trigger: m.t, 
+                trigger: target, 
                 start: "top 50%", 
+                end: "bottom 50%", // 끝나는 지점 설정
                 onEnter: () => gsap.to('body', { backgroundColor: m.c, duration: 0.8 }), 
-                onEnterBack: () => gsap.to('body', { backgroundColor: m.c, duration: 0.8 }) 
+                onEnterBack: () => gsap.to('body', { backgroundColor: m.c, duration: 0.8 }),
+                // 스크롤을 완전히 올려서 첫 번째 섹션 이전으로 갈 때 초기화하고 싶다면 추가
+                onLeaveBack: () => {
+                    if(index === 0) gsap.to('body', { backgroundColor: "", duration: 0.8 });
+                }
             });
         }
     });
 
     return () => gsap.set('body', { backgroundColor: "" });
 });
-
 
 const cursorImg = document.querySelector('.cursor-texture');
 if (cursorImg) {
