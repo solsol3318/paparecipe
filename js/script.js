@@ -91,7 +91,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
 
 // --- Product 스크롤 수정본 ---
-// --- Product 스크롤 수정본 ---
+ScrollTrigger.normalizeScroll(true); 
+ScrollTrigger.config({ ignoreMobileResize: true });
 const productSec = document.querySelector('.scroll-item');
 if (productSec) {
     const items = gsap.utils.toArray('.product-list li');
@@ -109,7 +110,8 @@ if (productSec) {
             trigger: productSec,
             start: "top top",
             end: window.innerWidth <= 768 ? "+=1500" : "+=12000", 
-            pin: true,          
+            pin: true,
+            anticipatePin: 1,          
             scrub: 1.5,     
             invalidateOnRefresh: true,
             onEnter: () => {
