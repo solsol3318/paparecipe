@@ -302,7 +302,7 @@ button:focus {outline: none;}
     .intro .intro-inner .txt .index768 {display: block; width: 100%;}
     .intro .intro-inner .txt .index390 {display: none;}
     
-    .intro {padding: 332px 0 0; width: 100%; height: 80vh;}
+    .intro {padding: 332px 0 0; width: 100%; height: 90dvh;}
     .intro .intro-inner {margin: 0 auto; width: 100%; height: 155px; text-align: center;}
     .inner-header .logo {top: 30%;}
     .inner-header .logo a {width: 130px; height: 22px;}
@@ -340,7 +340,7 @@ button:focus {outline: none;}
     .moving-txt {padding: 80px 0 50px;}
     .moving-txt .marquee {font-size: 120px; margin-bottom: 10px; letter-spacing: 2%;}
 
-    .skin-concern {padding: 100px 0; height: 270vh;}
+    .skin-concern {padding: 100px 0; height: 280dvh;}
     .skin-concern .concern-inner .text-box {margin: 0 auto 100px;}
     .skin-concern .text-box .tit .index768.none::before {display: none ;}
     .skin-concern .text-box .tit .index390::before {content: "\A"; white-space: pre; display: block; height: 0; margin: 0; line-height: 0;}
