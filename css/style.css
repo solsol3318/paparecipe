@@ -15,7 +15,7 @@ button:focus {outline: none;}
 
 
 /* 공통요소 */
-body {font-family: 'Pretendard', sans-serif; font-weight: 300; height: 100%; margin: auto; padding: 0; overflow-x: hidden; background: #F0E5E0; z-index: 0; overflow: hidden; touch-action: none;}
+body {font-family: 'Pretendard', sans-serif; font-weight: 300; height: 100%; margin: auto; padding: 0; overflow-x: hidden; background: #F0E5E0; z-index: 0; overflow: hidden; touch-action: none; touch-action: pan-y !important; -webkit-overflow-scrolling: touch;}
 .tit {font-family: 'El Messiri', sans-serif; font-weight: normal; font-size: clamp(60px, 54px, 34px); letter-spacing: -3%;}
 .txt {font-size: clamp(20px, 24px, 16px); font-weight: 200;}
 span.dot {color: #FFA223;}

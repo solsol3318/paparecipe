@@ -109,7 +109,7 @@ if (productSec) {
         scrollTrigger: {
             trigger: productSec,
             start: "top top",
-            end: window.innerWidth <= 768 ? "+=1500" : "+=12000", 
+            end: window.innerWidth <= 768 ? "+=3000" : "+=12000", 
             pin: true,
             anticipatePin: 1,          
             scrub: 1.5,     
