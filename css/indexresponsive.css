@@ -84,7 +84,7 @@ button:focus {outline: none;}
     .moving-txt .marquee {font-size: 280px;}
 
     .skin-concern {background: #1a1a1e !important;}
-    .skin-concern {padding: 200px 0 310px; height: 280vh;}
+    .skin-concern {padding: 200px 0 310px; height: 380vh;}
     .skin-concern .concern-inner {max-width: 1024px;}
     .skin-concern .concern-inner .text-box {width: 90%;}
     .skin-concern .concern-inner .text-box .tit .index1024::before {content: "\A"; white-space: pre; display: block; height: 0; margin: 0; line-height: 0;}
