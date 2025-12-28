@@ -387,12 +387,12 @@ button:focus {outline: none;}
     .day6 .day-inner .left .textbox {width: 100%; position:absolute; top: 85%; left: 0%; text-align: center;}
     .day6 .day-inner .left h2.tit {font-size: 32px;} 
     .day6 .day-inner .left p.txt {font-size: 16px;}
-    .day6 .day-inner .right {width: 330px; height: 443px; position: absolute; top: 17.5%; left: 6%;}
+    .day6 .day-inner .right {width: 330px; height: 443px; position: absolute; top: 14%; left: 6%;}
     .day6 .day-inner .right img {display: block; width: 90%; height: 100%;; margin: auto;}
 
     .ad .ad-inner video {width: 330px; height: 202px;}
 
-    footer .top h3 {font-size: 92px;  padding-top: 130px; background: transparent; clip-path: inset(0 100% 0 0); -webkit-clip-path: inset(0 100% 0 0); transition: none;}
+    footer .top h3 {font-size: 105px;  padding-top: 130px; background: transparent; clip-path: inset(0 100% 0 0); -webkit-clip-path: inset(0 100% 0 0); transition: none;}
     footer .bottom {padding: 230px 20px 80px 20px; position: relative;}
     footer .bottom .fo-ble {position: absolute; top: 20%; left: 25%; width: 195px; height: 109px;}
     footer .bottom ul.left {width: 100%;}
