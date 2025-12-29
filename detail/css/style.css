@@ -15,19 +15,25 @@ button:focus {outline: none;}
 
 /* 공통 및 Header */
 body { font-family: 'Pretendard', sans-serif; margin: 0 auto; color: #1A1A1E; }
-header { background: linear-gradient( rgba(26,26,30,0.4)0%, rgba(26,26,30,0)100%); width: 100%; height: 156px; position: fixed; left: 0; top: 0; z-index: 1000; transition: transform 0.4s ease ,background 0.5s ease; }
-header.hide { transform: translateY(-100%); }
-.inner-header { width: 100%; margin: 0 auto; align-items: center; font-family: 'El Messiri', sans-serif; color: rgba(234,234,234,0.4); font-size: 16px; letter-spacing: -2%; font-weight: normal; }
-.inner-header nav { width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 39px 148px 70px; }
-.inner-header .gnb { width: 19%; display: flex; justify-content: space-between; }
-.inner-header .gnb .have { color: rgba(234,234,234,0.8); }
-.inner-header .gnb a { display: block; width: 100%; height: 100%; }
-.inner-header .tnb { width: 8%; display: flex; justify-content: space-between; }
-.inner-header .tnb a { display: block; width: 100%; height: 100%; }
-.inner-header .logo { position: absolute; left: 50%; transform: translateX(-50%); margin:0; z-index: 10; opacity: 1; transition: opacity 0.4s ease; }
-.inner-header .logo a { display: block; width: 215px; height: 37px; cursor: pointer; }
-.inner-header .logo a img { width: 100%; height: 100%; }
-.inner-header .mobile-menu-toggle, .menuOpen { display: none; }
+/* header */ 
+header {background: linear-gradient( rgba(26,26,30,0.4)0%, rgba(26,26,30,0)100%); width: 100%; height: 156px; position: fixed; left: 0; top: 0; z-index: 1000; transition: transform 0.4s ease, background 0.5s ease;}
+header.hide {transform: translateY(-100%);}
+
+.inner-header {width: 100%; margin: 0 auto; align-items: center;  font-family: 'El Messiri', sans-serif; color: rgba(234,234,234,0.4); font-size: 16px; letter-spacing: -2%; font-weight: normal;}
+.inner-header nav {padding: 39px 148px 70px; align-items: center;}
+.inner-header .gnb .have {color: rgba(234,234,234,0.8);}
+.inner-header .mobile-menu-toggle {display: none;}
+.inner-header nav {width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 39px 148px 70px;}
+.inner-header .gnb {width: 19%; display: flex; justify-content: space-between;}
+.inner-header .gnb a {display: block; width: 100%; height: 100%;}
+.inner-header .logo {position: absolute; left: 50%; transform: translateX(-50%); margin:0; z-index: 10; opacity: 1; transition: opacity 0.4s ease;}
+
+.inner-header .logo a {display: block; width: 215px; height: 37px; cursor: pointer;}
+.inner-header .logo a img {width: 100%; height: 100%;}
+.inner-header .tnb {width: 8%; display: flex; justify-content: space-between;}
+.inner-header .tnb a {display: block; width: 100%; height: 100%;}
+.inner-header .tnb .icon {display: none;}
+.menuOpen {display: none;}
 
 /* Product */
 .wrap { max-width:1920px; margin:0 auto;}
@@ -114,6 +120,7 @@ footer .bottom ul.right .time { font-size: 16px; color: #DBDBDB; }
     .menuOpen {display: none;}
     .inner-header .gnb {width: 30%;}
     .inner-header .tnb {width: 12%;}
+    .inner-header .tnb .icon {display: none;}
     footer .bottom {padding: 70px 40px 77px 40px;}
     footer .bottom .fo-ble {width: 235px; height: 132px; margin-right: 40px;}
     footer .bottom ul.left {width: 40%;}
@@ -127,11 +134,12 @@ footer .bottom ul.right .time { font-size: 16px; color: #DBDBDB; }
 }
 
 @media screen and (max-width:1024px) {
-  .menuOpen {display: none;}
-  .inner-header nav {padding: 39px 65px 70px;}
-  header.fixed-state .inner-header nav {padding: 39px 65px 70px;}
-  .inner-header .gnb {width:30%;}
-  .inner-header .tnb {width: 15%;}
+    .menuOpen {display: none;}
+    .inner-header nav {padding: 39px 65px 70px;}
+    header.fixed-state .inner-header nav {padding: 39px 65px 70px;}
+    .inner-header .gnb {width:30%;}
+    .inner-header .tnb {width: 15%;}
+    .inner-header .tnb .icon {display: none;}
 
   .product .img-box{overflow: hidden;}
   .product .main {height: 953px; width: 893px; flex-shrink: 0;}
@@ -180,35 +188,28 @@ footer .bottom ul.right .time { font-size: 16px; color: #DBDBDB; }
 
 
 @media screen and (max-width:768px) {
-  header .inner-header nav ul.gnb, header .inner-header nav ul.tnb {display: none;}
+    header .inner-header nav ul.gnb {display: none;}
     .inner-header {position: relative;}
-    .inner-header .mobile-menu-toggle {background: transparent; border: none; display: block; position: absolute; top: 20%; left: 2%;}
+    .inner-header .mobile-menu-toggle {background: transparent; border: none; display: block; position: absolute; top: 17%; left: 2%;}
     .inner-header .mobile-menu-toggle a {display: block; width: 50px; height: 50px; position: absolute; top: 5%; left: 5%;}
-    .inner-header .mobile-menu-toggle a span:nth-child(1) {width: 34px; height: 2px; position: absolute; top: 28px;  background: #EAEAEA;}
-    .inner-header .mobile-menu-toggle a span:nth-child(2) {width: 34px; height: 2px; position: absolute; top: 39px;  background: #EAEAEA;}
-    .inner-header .mobile-menu-toggle a span:nth-child(3) {width: 34px; height: 2px; position: absolute; top: 50px; background: #EAEAEA;}
-    .inner-header .logo {
-    position: absolute; 
-    left: 50%; 
-    top: 38%;
-    transform: translateX(-50%); 
-    margin:0; 
-    z-index: 10;
-    opacity: 1; 
-    transition: opacity 0.4s ease;}
-    .visual .img-bottom {bottom: -30%;}
+    .inner-header .mobile-menu-toggle a span:nth-child(1) {width: 30px; height: 1.8px; position: absolute; top: 28px;  background: #EAEAEA;}
+    .inner-header .mobile-menu-toggle a span:nth-child(2) {width: 30px; height: 1.8px; position: absolute; top: 39px;  background: #EAEAEA;}
+    .inner-header .mobile-menu-toggle a span:nth-child(3) {width: 30px; height: 1.8px; position: absolute; top: 50px; background: #EAEAEA;}
+    .inner-header .logo {position: absolute; left: 50%; top: 41%;transform: translateX(-50%); margin:0; z-index: 10; opacity: 1; transition: opacity 0.4s ease;}
+    .inner-header .logo a {display: block; width: 130px; height: 22px; cursor: pointer;}
+    .inner-header .tnb {width: 9%; position: absolute; top: 37%; right: 5%; opacity: 0.7;}
+    .inner-header .tnb li {display: none;}
+    .inner-header .tnb .icon {display: inline-block; width: 26px; height: 26px;}
 
     .menuOpen {display: block;}
-    .menuOpen .menuWrap {width: 100%; height: 100vh; background: rgba(26, 26, 30, 0.8); z-index: 100; top: 0; right: 0; position: fixed;}
-    .menuOpen .menuWrap .close {display: block; width: 25px; height: 25px; position: absolute; right: 7%; top: 5%;}
+    .menuOpen .menuWrap {width: 100%; height: 100vh; background: rgba(26, 26, 30, 0.8); z-index: 100; top: 5px; right: 0; position: fixed;}
+    .menuOpen .menuWrap .close {display: block; width: 24px; height: 24px; position: absolute; right: 7%; top: 4%;}
     .menuOpen .menuWrap .close img {width: 100%;}
     .menuOpen .menuWrap .menu-tit {font-family: 'El Messiri', sans-serif; font-size: 28px; position: absolute; top: 30%; left: 50%; transform: translateX(-50%); text-align: center; font-weight: 200;}
     .menuOpen .menuWrap .menu-tit li {margin-bottom: 15px;}
     .menuOpen .menuWrap .menu-tit li a {display: inline-block; position: relative; transition: all 0.3s; color: rgba(234,234,234,0.6);}
     .menuOpen .menuWrap .menu-tit li a:hover {color: #eaeaea; opacity: 1; transform: scale(1.1);}
-    .menuOpen .menuWrap .menu-tit:hover li a:not(:hover) {
-    opacity: 0.5; /* 마우스가 올라가지 않은 다른 메뉴들은 더 흐려짐 */
-}
+    .menuOpen .menuWrap .menu-tit:hover li a:not(:hover) {opacity: 0.5;}
     .menuOpen .menuWrap .menu-tit li.menu-margin {margin-bottom: 30px;}
     .menuOpen .menuWrap {width: 0%; opacity: 0; left: -100%; transition: all 0.6s;}
     .menuOpen .menuWrap.on {width: 100%; opacity: 1; left: 0; transition: all 0.9s;}
@@ -308,10 +309,19 @@ footer .bottom ul.right .time { font-size: 16px; color: #DBDBDB; }
 }
 
 @media screen and (max-width:390px) {
-  .inner-header .mobile-menu-toggle {top: 0%; left: 0%;} 
+    .inner-header .logo {position: absolute; left: 50%; top: 28%;}
+    .inner-header .logo a {display: block; width: 100px; height: 17px; cursor: pointer;}
+    .inner-header .mobile-menu-toggle {top: 2%; left: 0%;} 
+    .inner-header .mobile-menu-toggle a span:nth-child(1) {width: 30px; height: 1.3px; top: 28px;}
+    .inner-header .mobile-menu-toggle a span:nth-child(2) {width: 30px; height: 1.3px; top: 38px;}
+    .inner-header .mobile-menu-toggle a span:nth-child(3) {width: 30px; height: 1.3px; top: 48px;}
+    .inner-header .tnb {width: 10%; position: absolute; top: 23%; right: 11%; opacity: 0.7;}
+    .inner-header .tnb li {display: none;}
+    .inner-header .tnb .icon {display: inline-block; width: 26px; height: 26px; margin-right: 7px;}
+
     .menuOpen {display: block;}
     .menuOpen .menuWrap {width: 100%; height: 100vh; background: rgba(26, 26, 30, 0.8); z-index: 100; top: 0; right: 0; position: fixed;}
-    .menuOpen .menuWrap .close {display: block; width: 25px; height: 25px; position: absolute; right: 7%; top: 3.5%;}
+    .menuOpen .menuWrap .close {display: block; width: 22px; height: 22px; position: absolute; right: 7%; top: 3%;}
     .menuOpen .menuWrap .close img {width: 100%;}
     .menuOpen .menuWrap .menu-tit {font-family: 'El Messiri', sans-serif; font-size: 28px; position: absolute; top: 30%; left: 50%; transform: translateX(-50%); text-align: center; font-weight: 200;}
     .menuOpen .menuWrap .menu-tit li {margin-bottom: 15px;}
@@ -322,14 +332,8 @@ footer .bottom ul.right .time { font-size: 16px; color: #DBDBDB; }
     .menuOpen .menuWrap {width: 0%; opacity: 0; left: -100%; transition: all 0.6s;}
     .menuOpen .menuWrap.on {width: 100%; opacity: 1; left: 0; transition: all 0.9s;}
 
-    .inner-header .mobile-menu-toggle a {display: block; width: 50px; height: 50px;}
-    .inner-header .mobile-menu-toggle a span:nth-child(1) {width: 30px; height: 1.5px; top: 35px;}
-    .inner-header .mobile-menu-toggle a span:nth-child(2) {width: 30px; height: 1.5px; top: 45px;}
-    .inner-header .mobile-menu-toggle a span:nth-child(3) {width: 30px; height: 1.5px; top: 55px;}
     .intro {padding: 402px 90px 150px; width: 100%;}
     .intro .intro-inner {margin: 0 auto; width: 100%; height: 300px; text-align: center;}
-    .inner-header .logo {top: 30%;}
-    .inner-header .logo a {width: 130px; height: 22px;}
     .product {display: flex; flex-direction: row;}
     .txt-box .options-bar {padding: 0; flex-direction: column; align-items: flex-start; gap: 30px;}
 .txt-box .txtBox .list{width: 50%;}
