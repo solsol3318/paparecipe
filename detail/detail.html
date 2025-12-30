@@ -254,6 +254,30 @@ $(function () {
     }
     }
 
+    const footerH3 = document.querySelector('footer .top h3');
+if (footerH3) {
+    // 트랜지션 충돌을 막기 위해 초기화
+    gsap.set(footerH3, { backgroundColor: "transparent", transition: "none" });
+
+    gsap.to(footerH3, { 
+        clipPath: "inset(0 0% 0 0)", 
+        webkitClipPath: "inset(0 0% 0 0)",
+        duration: 1.5, 
+        ease: "power2.inOut",
+        scrollTrigger: { 
+            trigger: "footer", 
+            start: "top 90%",
+            onEnter: () => {
+                // 부모 요소인 footer .top의 배경색이 body색인지 확인하고 강제 교정
+                const parent = document.querySelector('footer .top');
+                if (parent) {
+                    parent.style.setProperty();
+                }
+            }
+        }
+    });
+}
+
     // 헤더 고정 + 스크롤 다운 시 숨김 / 업 시 표시
 document.addEventListener('DOMContentLoaded', function() {
     const header = document.querySelector('header');
