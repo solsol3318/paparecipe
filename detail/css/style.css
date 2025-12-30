@@ -326,7 +326,7 @@ footer .bottom ul.right .time { font-size: 16px; color: #DBDBDB; }
 
 @media screen and (max-width:390px) {
     .inner-header .logo {position: absolute; left: 50%; top: 28%;}
-    .inner-header .logo a {display: block; width: 100px; height: 17px; cursor: pointer;}
+    .inner-header .logo a img {display: block; width: 100px; height: 17px; cursor: pointer;}
     .inner-header .mobile-menu-toggle {top: 2%; left: 0%;} 
     .inner-header .mobile-menu-toggle a span:nth-child(1) {width: 30px; height: 1.3px; top: 28px;}
     .inner-header .mobile-menu-toggle a span:nth-child(2) {width: 30px; height: 1.3px; top: 38px;}
@@ -355,8 +355,9 @@ footer .bottom ul.right .time { font-size: 16px; color: #DBDBDB; }
     .txt-box .txtBox .list{width: 50%;}
     .product2 .a{padding: 0;}
     .product2 ul li{width: 195px;height: 256px;}
-    .product2 .a h3{font-size: 13px;letter-spacing: -3;font-weight: 400;margin-top: -20px;}
-    .product2 .a p{font-size: 16px; font-weight: 500;letter-spacing: -3;}
+    .product2 ul li a {padding: 10px;}
+    .product2 ul li .textBox h3 {font-size: 13px;letter-spacing: -3%;font-weight: 400;margin-top: -20px;}
+    .product2 ul li .textBox p {font-size: 16px; font-weight: 500;letter-spacing: -3;}
     footer .top h3 {font-size: 92px;  padding-top: 100px; background: transparent; clip-path: inset(0 100% 0 0); -webkit-clip-path: inset(0 100% 0 0); transition: none;}
     footer .bottom {padding: 230px 20px 80px 20px; position: relative;}
     footer .bottom .fo-ble {position: absolute; top: 20%; left: 25%; width: 195px; height: 109px;}
