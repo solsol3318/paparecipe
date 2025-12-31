@@ -5,7 +5,7 @@ $(document).on('click', 'a[href="#"]:not(.topBtn)', function(e){
 function showPopup() {
     const url = "../imgBy.html";
     const name = "영상 및 이미지출처";
-    const specs = "width=580, height=600, left=200, top=100";
+    const specs = "width=680, height=600, left=200, top=100";
     
     window.open(url, name, specs);
 }
